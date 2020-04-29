@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,9 +9,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		System.out.println("--------------Adeel------------");
+		Logger logger = LogManager.getLogger(DemoApplication.class);
 		SpringApplication.run(DemoApplication.class, args);
-		System.out.println("--------------Asghar------------");
+		logger.info("Welcome info");
+		logger.warn("Welcome warn");
+		logger.debug("Welcome debug");
+		logger.error("Welcome error");
+		logger.info("Welcome");
 	}
 
 }

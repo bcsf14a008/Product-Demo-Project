@@ -33,7 +33,7 @@ public class ProductController {
 		return new ResponseEntity<List<ProductEntity>>(list, new HttpHeaders(), HttpStatus.OK);
 	}
 
-	@GetMapping("/{code}")
+	@GetMapping("/byCode/{code}")
 	public ResponseEntity<ProductEntity> getProductByCode(@PathVariable("code") UUID code) {
 
 		ProductEntity entity = productService.getProductByCode(code);
